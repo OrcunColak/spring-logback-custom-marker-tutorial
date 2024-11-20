@@ -1,6 +1,6 @@
 package com.colak.springtutorial;
 
-import com.colak.springtutorial.marker.CustomerMarker;
+import com.colak.springtutorial.marker.CustomMarker;
 import jakarta.annotation.PreDestroy;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
@@ -19,13 +19,13 @@ public class SpringTutorialApplication {
 	@EventListener(ApplicationReadyEvent.class)
 	public void logSomething() {
 		log.info("This is a log message");
-		log.info(CustomerMarker.TELEGRAM_MARKER, "This is a log message for telegram");
+		log.info(CustomMarker.TELEGRAM_MARKER, "This is a log message for telegram");
 	}
 
 	// when application ends, log message will be printed
 	@PreDestroy
 	public void destroy() {
-		log.info(CustomerMarker.TELEGRAM_MARKER, "Application is shutting down");
+		log.info(CustomMarker.TELEGRAM_MARKER, "Application is shutting down");
 	}
 
 }
