@@ -18,7 +18,8 @@ public class SpringTutorialApplication {
 
 	@EventListener(ApplicationReadyEvent.class)
 	public void logSomething() {
-		log.info(CustomerMarker.TELEGRAM_MARKER, "This is a log message");
+		log.info("This is a log message");
+		log.info(CustomerMarker.TELEGRAM_MARKER, "This is a log message for telegram");
 	}
 
 	// when application ends, log message will be printed

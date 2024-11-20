@@ -8,15 +8,21 @@ import java.util.List;
 
 public class MarkerAppender extends AppenderBase<ILoggingEvent> {
 
+    private String markerName;
+
+    public void setMarkerName(String markerName) {
+        this.markerName = markerName;
+    }
+
     private boolean containsMarker(ILoggingEvent event) {
         boolean result = false;
         List<Marker> markers = event.getMarkerList();
-        if (markers == null || markers.isEmpty()) {
+        if (markers == null) {
             return result;
         }
 
         for (Marker marker : markers) {
-            if (marker.contains(CustomerMarker.TELEGRAM_MARKER)) {
+            if (marker.getName().equals(markerName)) {
                 result = true;
                 break;
             }

@@ -5,5 +5,5 @@ import org.slf4j.MarkerFactory;
 
 public class CustomerMarker {
 
-    public static final Marker TELEGRAM_MARKER = MarkerFactory.getMarker("TEST_MARKER");
+    public static final Marker TELEGRAM_MARKER = MarkerFactory.getMarker("TELEGRAM_MARKER");
 }

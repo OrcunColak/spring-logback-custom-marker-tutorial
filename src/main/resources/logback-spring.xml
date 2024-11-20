@@ -12,7 +12,7 @@
 
     <!-- Define the custom appender -->
     <appender name="MARKER_APPENDER" class="com.colak.springtutorial.marker.MarkerAppender">
-        <markerName>IMPORTANT</markerName>
+        <markerName>TELEGRAM_MARKER</markerName>
     </appender>
 
     <root level="info">
